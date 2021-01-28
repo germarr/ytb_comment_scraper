@@ -1,15 +1,17 @@
 import pandas as pd
 
-
 ## Call the "build()" function from the Python-client
 from googleapiclient.discovery import build
 
-api_key= ""
+api_key = input("API KEY: ")
 youtube = build("youtube","v3", developerKey=api_key)
-url=input("VIDEOURL: ")
+url = input("VIDEOURL: ")
 
 def get_comments(url):
+    # Get the ID of the video by splitting the URL
     single_video_id = url.split("=")[1].split("&")[0]
+    # Use the list() method to extract a JSON with key information 
+    # from the video.
     video_list=youtube.videos().list(part="snippet",id=single_video_id).execute()
     channel_id= video_list["items"][0]["snippet"]["channelId"]
     title_single_video= video_list["items"][0]["snippet"]["title"]
@@ -23,7 +25,6 @@ def get_comments(url):
     while True:
         #Request the first 50 videos of a channel. This is the full dictionary. The result is store in a variable called "pl_response".
         #PageToken at this point is "None"
-   
         pl_request_comment= youtube.commentThreads().list(part=["snippet","replies"],
                                             videoId=single_video_id, 
                                             maxResults=50,
