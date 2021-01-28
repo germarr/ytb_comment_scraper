@@ -4,13 +4,11 @@ This script is part of my research project called "What Topics Drives Youtube MX
 
 This Python script will get all the comments from a Yotube (trough the Youtube API) and export them to a CSV file. 
 
-Here's an example of the final result you can get after running the script:
-
 ## **Index**
 ---
 * Read the Requirements for this project [**here**](#requirements)
-* I want to learn how the code works! 😮--> Click [**here**](#full-tutorial) for the full tutorial.
-* Just give me a quick summary 😎 --> Click [**here**](#quick-tutorial)
+* I want to learn how the code was builded! 😮--> Click [**here**](#full-tutorial) for the full tutorial.
+* Just give me a quick summary 😎 --> Click [**here**](#quick-tutorial) to learn how tu use the `comment_scrapper.py` file
 
 ## **Requirements**
 ---
