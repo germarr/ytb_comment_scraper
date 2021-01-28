@@ -19,7 +19,6 @@ def get_comments(url):
     forUserName = None
 
     nextPageToken_comments = None
-    replies_commentsone=[]
     commentsone=[]
 
     while True:
